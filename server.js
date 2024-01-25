@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 5000; // define a port
 
 // middleware
-app.use(express.json()); // all user to send  data request body
+app.use(express.json()); // all user to send  data request body in json format
 app.use("/api/contacts", require("./routes/contactRoutes")); // routing
 app.use(errorHandler); // handler error in json format
 
