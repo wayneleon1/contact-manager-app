@@ -48,7 +48,7 @@ const loginUser = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("All fields are mandatory!");
   }
-  
+
   const user = await User.findOne({ email });
   // compare password with hashedPassword
   if (user && (await bcrypt.compare(password, user.password))) {
